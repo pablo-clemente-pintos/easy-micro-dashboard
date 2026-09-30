@@ -1,0 +1,218 @@
+[2K[1G[1myarn run v1.22.22[22m
+[2K[1G[33mwarning[39m ../../../package.json: No license field
+[2K[1G[2m$ dotenv -e .env.stg -- yarn next:dev[22m
+[2K[1G[33mwarning[39m ../../../package.json: No license field
+[2K[1G[2m$ yarn clean:host && cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true next dev --port 3000[22m
+[2K[1G[33mwarning[39m ../../../package.json: No license field
+[2K[1G[2m$ rimraf host[22m
+  [1m[38;2;173;127;168m▲ Next.js 14.2.35[39m[22m
+  - Local:        http://localhost:3000
+  - Experiments (use with caution):
+    · typedRoutes
+    · instrumentationHook
+
+ [32m[1m✓[22m[39m Starting...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+<w> [Module Federation Manifest Plugin] [36m[ Module Federation Manifest Plugin ][39m Manifest will use absolute path resolution via its host at runtime, reason: publicPath='auto'
+<i> [Module Federation Manifest Plugin] [36m[ Module Federation Manifest Plugin ][39m Manifest Link: [36m{auto}/static/chunks/mf-manifest.json[39m 
+<i> [Module Federation Manifest Plugin] [36m[ Module Federation Manifest Plugin ][39m Manifest Link: [36m/_next/mf-manifest.json[39m 
+<i> [Module Federation Manifest Plugin] [36m[ Module Federation Manifest Plugin ][39m Manifest Link: [36m{auto}/static/chunks/mf-manifest.json[39m 
+<i> [Module Federation Manifest Plugin] [36m[ Module Federation Manifest Plugin ][39m Manifest Link: [36m/_next/mf-manifest.json[39m 
+ [37m[1m○[22m[39m Compiling /instrumentation ...
+<i> [Module Federation Manifest Plugin] [36m[ Module Federation Manifest Plugin ][39m Manifest Link: [36m/_next/mf-manifest.json[39m 
+ [32m[1m✓[22m[39m Compiled /instrumentation in 695ms (630 modules)
+ [32m[1m✓[22m[39m Ready in 4.8s
+ [32m[1m✓[22m[39m Compiled /src/middleware in 332ms (140 modules)
+ [37m[1m○[22m[39m Compiling / ...
+<i> [Module Federation Manifest Plugin] [36m[ Module Federation Manifest Plugin ][39m Manifest Link: [36m{auto}/static/chunks/mf-manifest.json[39m 
+<i> [Module Federation Manifest Plugin] [36m[ Module Federation Manifest Plugin ][39m Manifest Link: [36m/_next/mf-manifest.json[39m 
+ [32m[1m✓[22m[39m Compiled / in 12.1s (2172 modules)
+ HEAD / [32m200[39m in 1428ms
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <index.mjs__Dn>. See https://reactjs.org/link/warning-keys for more information.
+    at xt (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/product-card-v2/index.mjs.js:1866:21)
+    at Ri (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/product-card-v2/index.mjs.js:3119:17)
+    at div
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at Ni (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/product-card-v2/index.mjs.js:3130:62)
+    at a
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at dt (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/product-card-v2/index.mjs.js:1765:18)
+    at Wi (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/product-card-v2/index.mjs.js:3188:15)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at EcomProductsItem (webpack-internal:///./src/presentation/modules/content-cms-view/components/ecom-products/components/item/index.tsx:22:29)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at kn (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/swiper/index.mjs.js:3461:15)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at Container (webpack-internal:///./src/presentation/components/atoms/Container/index.tsx:10:22)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at EcomProducts (webpack-internal:///./src/presentation/modules/content-cms-view/components/ecom-products/index.tsx:31:124)
+    at section
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at ContentWrapper (webpack-internal:///./src/presentation/components/atoms/ContentWrapper/index.tsx:10:27)
+    at ContentCmsView (webpack-internal:///./src/presentation/modules/content-cms-view/index.tsx:18:27)
+    at section
+    at Home (webpack-internal:///./src/presentation/modules/home/index.tsx:12:17)
+    at main
+    at CartEventLayout (webpack-internal:///./src/presentation/components/layouts/main-layout/cart-event-layout.tsx:20:28)
+    at Hydrate (webpack-internal:///./node_modules/react-query/es/react/Hydrate.js:30:25)
+    at QueryClientProvider (webpack-internal:///./node_modules/react-query/es/react/QueryClientProvider.js:29:23)
+    at Provider (webpack-internal:///./node_modules/react-redux/dist/react-redux.legacy-esm.js:848:13)
+    at DeviceProvider (webpack-internal:///./src/presentation/context/DeviceContext.tsx:15:27)
+    at MainLayout (webpack-internal:///./src/presentation/components/layouts/main-layout/main-layout.tsx:51:23)
+    at exports.ThemeProvider (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:12792)
+    at E (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/theme/theme-provider/index.mjs.js:171:15)
+    at HomePage (webpack-internal:///./src/pages/index.tsx:98:21)
+    at s (/Users/pablomartinclemente/Desktop/organization/host/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:8:2924)
+    at div
+    at main
+    at MainLayout (webpack-internal:///./src/presentation/components/layouts/main-layout/index.tsx:99:23)
+    at Home (webpack-internal:///./src/pages/index.tsx:48:13)
+    at main
+    at AuthEvents (webpack-internal:///./src/presentation/providers/auth/auth-events.tsx:32:23)
+    at WrapperProvider (webpack-internal:///./src/presentation/providers/auth/index.tsx:50:28)
+    at CookiesProvider (webpack-internal:///./node_modules/react-cookie/esm/index.mjs:26:15)
+    at AuthProvider (webpack-internal:///./src/presentation/providers/auth/index.tsx:139:25)
+    at WrapperEvents (webpack-internal:///./src/presentation/providers/shopping-cart-events/wrapper-events.tsx:32:26)
+    at ShoppingCartEvents (webpack-internal:///./src/presentation/providers/shopping-cart-events/index.tsx:21:31)
+    at KioskProvider (webpack-internal:///./src/presentation/providers/kiosko/index.tsx:12:26)
+    at DeviceProvider (webpack-internal:///./src/presentation/providers/device/index.tsx:8:27)
+    at CookiesProvider (webpack-internal:///./node_modules/react-cookie/esm/index.mjs:26:15)
+    at QueryClientProvider (webpack-internal:///./node_modules/react-query/es/react/QueryClientProvider.js:29:23)
+    at Provider (webpack-internal:///./node_modules/react-redux/dist/react-redux.legacy-esm.js:848:13)
+    at StoreProvider (webpack-internal:///./src/presentation/providers/store/index.tsx:15:26)
+    at exports.ThemeProvider (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:12792)
+    at E (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/theme/theme-provider/index.mjs.js:171:15)
+    at ThemeProvider (webpack-internal:///./src/presentation/providers/theme/index.tsx:10:26)
+    at ProvidersLayout (webpack-internal:///./src/presentation/components/layouts/providers-layout/index.tsx:50:28)
+    at App (webpack-internal:///./src/pages/_app.tsx:65:16)
+    at Be (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:1957)
+    at StyleRegistry (/Users/pablomartinclemente/Desktop/organization/host/node_modules/styled-jsx/dist/index/index.js:449:36)
+    at eU (/Users/pablomartinclemente/Desktop/organization/host/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:8:20506)
+    at eH (/Users/pablomartinclemente/Desktop/organization/host/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:17:1788)
+    at eJ (/Users/pablomartinclemente/Desktop/organization/host/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:17:3091)
+    at div
+    at e9 (/Users/pablomartinclemente/Desktop/organization/host/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:26:761)
+styled-components: it looks like an unknown prop "background" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)
+styled-components: it looks like an unknown prop "variant" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <index.mjs__Xe>. See https://reactjs.org/link/warning-keys for more information.
+    at xt (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/product-card-v2/index.mjs.js:1866:21)
+    at wi (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/product-card-v2/index.mjs.js:2994:17)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at div
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at Ni (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/product-card-v2/index.mjs.js:3130:62)
+    at a
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at dt (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/product-card-v2/index.mjs.js:1765:18)
+    at Wi (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/product-card-v2/index.mjs.js:3188:15)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at EcomProductsItem (webpack-internal:///./src/presentation/modules/content-cms-view/components/ecom-products/components/item/index.tsx:22:29)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at kn (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/molecules/swiper/index.mjs.js:3461:15)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at Container (webpack-internal:///./src/presentation/components/atoms/Container/index.tsx:10:22)
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at EcomProducts (webpack-internal:///./src/presentation/modules/content-cms-view/components/ecom-products/index.tsx:31:124)
+    at section
+    at div
+    at I (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:7941)
+    at ContentWrapper (webpack-internal:///./src/presentation/components/atoms/ContentWrapper/index.tsx:10:27)
+    at ContentCmsView (webpack-internal:///./src/presentation/modules/content-cms-view/index.tsx:18:27)
+    at section
+    at Home (webpack-internal:///./src/presentation/modules/home/index.tsx:12:17)
+    at main
+    at CartEventLayout (webpack-internal:///./src/presentation/components/layouts/main-layout/cart-event-layout.tsx:20:28)
+    at Hydrate (webpack-internal:///./node_modules/react-query/es/react/Hydrate.js:30:25)
+    at QueryClientProvider (webpack-internal:///./node_modules/react-query/es/react/QueryClientProvider.js:29:23)
+    at Provider (webpack-internal:///./node_modules/react-redux/dist/react-redux.legacy-esm.js:848:13)
+    at DeviceProvider (webpack-internal:///./src/presentation/context/DeviceContext.tsx:15:27)
+    at MainLayout (webpack-internal:///./src/presentation/components/layouts/main-layout/main-layout.tsx:51:23)
+    at exports.ThemeProvider (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:12792)
+    at E (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/theme/theme-provider/index.mjs.js:171:15)
+    at HomePage (webpack-internal:///./src/pages/index.tsx:98:21)
+    at s (/Users/pablomartinclemente/Desktop/organization/host/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:8:2924)
+    at div
+    at main
+    at MainLayout (webpack-internal:///./src/presentation/components/layouts/main-layout/index.tsx:99:23)
+    at Home (webpack-internal:///./src/pages/index.tsx:48:13)
+    at main
+    at AuthEvents (webpack-internal:///./src/presentation/providers/auth/auth-events.tsx:32:23)
+    at WrapperProvider (webpack-internal:///./src/presentation/providers/auth/index.tsx:50:28)
+    at CookiesProvider (webpack-internal:///./node_modules/react-cookie/esm/index.mjs:26:15)
+    at AuthProvider (webpack-internal:///./src/presentation/providers/auth/index.tsx:139:25)
+    at WrapperEvents (webpack-internal:///./src/presentation/providers/shopping-cart-events/wrapper-events.tsx:32:26)
+    at ShoppingCartEvents (webpack-internal:///./src/presentation/providers/shopping-cart-events/index.tsx:21:31)
+    at KioskProvider (webpack-internal:///./src/presentation/providers/kiosko/index.tsx:12:26)
+    at DeviceProvider (webpack-internal:///./src/presentation/providers/device/index.tsx:8:27)
+    at CookiesProvider (webpack-internal:///./node_modules/react-cookie/esm/index.mjs:26:15)
+    at QueryClientProvider (webpack-internal:///./node_modules/react-query/es/react/QueryClientProvider.js:29:23)
+    at Provider (webpack-internal:///./node_modules/react-redux/dist/react-redux.legacy-esm.js:848:13)
+    at StoreProvider (webpack-internal:///./src/presentation/providers/store/index.tsx:15:26)
+    at exports.ThemeProvider (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:12792)
+    at E (webpack-internal:///./node_modules/@cencosud-cencommerce/eds/dist/components/theme/theme-provider/index.mjs.js:171:15)
+    at ThemeProvider (webpack-internal:///./src/presentation/providers/theme/index.tsx:10:26)
+    at ProvidersLayout (webpack-internal:///./src/presentation/components/layouts/providers-layout/index.tsx:50:28)
+    at App (webpack-internal:///./src/pages/_app.tsx:65:16)
+    at Be (webpack-internal:///./node_modules/styled-components/dist/styled-components.cjs.js:3:1957)
+    at StyleRegistry (/Users/pablomartinclemente/Desktop/organization/host/node_modules/styled-jsx/dist/index/index.js:449:36)
+    at eU (/Users/pablomartinclemente/Desktop/organization/host/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:8:20506)
+    at eH (/Users/pablomartinclemente/Desktop/organization/host/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:17:1788)
+    at eJ (/Users/pablomartinclemente/Desktop/organization/host/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:17:3091)
+    at div
+    at e9 (/Users/pablomartinclemente/Desktop/organization/host/node_modules/next/dist/compiled/next-server/pages.runtime.dev.js:26:761)
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+ HEAD / [32m200[39m in 2390ms
+ HEAD / [32m200[39m in 1059ms
+styled-components: it looks like an unknown prop "device" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+ HEAD / [32m200[39m in 1492ms
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+ HEAD / [32m200[39m in 1512ms
+Warning: data for page "/" is 202 kB which exceeds the threshold of 128 kB, this amount of data can reduce performance.
+See more info here: https://nextjs.org/docs/messages/large-page-data
+ HEAD / [32m200[39m in 1462ms

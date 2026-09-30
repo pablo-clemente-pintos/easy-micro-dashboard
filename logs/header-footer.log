@@ -1,0 +1,22 @@
+[2K[1G[1myarn run v1.22.22[22m
+[2K[1G[33mwarning[39m ../../../package.json: No license field
+[2K[1G[2m$ rm -rf header && cross-env NODE_ENV=DEVELOPMENT dotenv -e .env.stg -- next dev --port 3001[22m
+ [33m[1m⚠[22m[39m You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+  [1m[38;2;173;127;168m▲ Next.js 14.2.32[39m[22m
+  - Local:        http://localhost:3001
+  - Environments: .env
+
+ [32m[1m✓[22m[39m Starting...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[36m[ Module Federation Manifest Plugin ][39m Manifest will use absolute path resolution via its host at runtime, reason: publicPath='auto'
+ [33m[1m⚠[22m[39m You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+ [32m[1m✓[22m[39m Ready in 11.6s
+ [37m[1m○[22m[39m Compiling /src/middleware ...
+ [32m[1m✓[22m[39m Compiled /src/middleware in 8.6s (2445 modules)
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.1s (2480 modules)
+styled-components: it looks like an unknown prop "device" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)
+ HEAD / [32m200[39m in 1418ms
+ HEAD / [32m200[39m in 17ms

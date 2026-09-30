@@ -1,0 +1,17 @@
+{
+  "name": "microfrontends-launcher",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lanzador local con UI para levantar los microfrontends en stg/uat/prod",
+  "type": "commonjs",
+  "bin": {
+    "mf-launcher": "server.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "open": "node server.js --open"
+  },
+  "engines": {
+    "node": ">=20.12"
+  }
+}

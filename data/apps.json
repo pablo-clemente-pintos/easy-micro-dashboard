@@ -1,0 +1,44 @@
+{
+  "apps": [
+    {
+      "id": "host",
+      "label": "Host",
+      "directory": "host",
+      "port": 3000,
+      "buildDir": "host",
+      "isHost": true
+    },
+    {
+      "id": "header-footer",
+      "label": "Header / Footer",
+      "directory": "header-footer",
+      "port": 3001,
+      "buildDir": "header",
+      "remoteKey": "NEXT_PUBLIC_HEADER_URI"
+    },
+    {
+      "id": "home",
+      "label": "Home",
+      "directory": "home",
+      "port": 3002,
+      "buildDir": "home",
+      "remoteKey": "NEXT_PUBLIC_HOME_URI"
+    },
+    {
+      "id": "plp",
+      "label": "PLP",
+      "directory": "plp",
+      "port": 3004,
+      "buildDir": "plp",
+      "remoteKey": "NEXT_PUBLIC_PLP_URI"
+    },
+    {
+      "id": "pdp",
+      "label": "PDP",
+      "directory": "pdp",
+      "port": 3005,
+      "buildDir": "pdp",
+      "remoteKey": "NEXT_PUBLIC_PDP_URI"
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lanzador de microfrontends</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell" id="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Panel de navegación">
+        <div class="sidebar-top">
+          <a class="brand" href="#overview" aria-label="Ir al inicio">
+            <span class="brand-mark" aria-hidden="true"
+              ><i></i><i></i><i></i><i></i
+            ></span>
+            <span class="brand-copy"
+              ><strong>Microfrontends</strong><small>Control local</small></span
+            >
+          </a>
+          <button
+            type="button"
+            class="icon-button sidebar-toggle"
+            id="sidebar-toggle"
+            aria-label="Ocultar barra lateral"
+            aria-expanded="true"
+            title="Mostrar u ocultar barra lateral"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m14 7-5 5 5 5M20 5v14" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="icon-button sidebar-mobile-close"
+            id="sidebar-mobile-close"
+            aria-label="Cerrar menú"
+            title="Cerrar menú"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Secciones">
+          <button type="button" class="is-active" data-view="services">
+            <span class="nav-icon" aria-hidden="true">▦</span
+            ><span class="nav-copy">Microfrontends</span>
+          </button>
+          <button type="button" data-view="remotes">
+            <span class="nav-icon" aria-hidden="true">⌘</span
+            ><span class="nav-copy">Remotes del host</span>
+          </button>
+          <button type="button" data-view="console">
+            <span class="nav-icon" aria-hidden="true">›_</span
+            ><span class="nav-copy">Consola en vivo</span>
+          </button>
+          <button
+            type="button"
+            class="sidebar-nav-button"
+            id="registry-toggle"
+            aria-controls="app-registry"
+            aria-haspopup="dialog"
+          >
+            <span class="nav-icon" aria-hidden="true">⚙</span
+            ><span class="nav-copy">Configurar micros</span>
+          </button>
+        </nav>
+
+        <div
+          class="feedback"
+          id="feedback"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+        <section
+          class="sidebar-settings"
+          aria-label="Configuración de ejecución"
+        >
+          <p class="sidebar-label">Configuración</p>
+          <div class="control control-environment">
+            <span class="control-label">Ambiente</span>
+            <div class="segmented" id="env-selector" role="radiogroup"></div>
+          </div>
+          <label class="control"
+            ><span class="control-label">Versión de Node</span
+            ><select id="node-version" aria-label="Versión de Node"></select
+          ></label>
+          <div class="control">
+            <span class="control-label">Salida de consola</span>
+            <div class="segmented" id="mode-selector" role="radiogroup">
+              <label
+                title="El lanzador controla el proceso y muestra la consola aquí"
+                ><input type="radio" name="mode" value="web" /><span
+                  >Web</span
+                ></label
+              >
+              <label
+                title="Abre una ventana de Terminal por micro con la consola interactiva"
+                ><input type="radio" name="mode" value="terminal" /><span
+                  >Terminal nativa</span
+                ></label
+              >
+            </div>
+          </div>
+          <label class="control"
+            ><span class="control-label">App de terminal</span
+            ><select id="terminal-app" aria-label="App de terminal"></select
+          ></label>
+        </section>
+
+        <p class="sidebar-footer"><span></span> Lanzador disponible</p>
+      </aside>
+
+      <div class="page-shell">
+        <header class="topbar">
+          <button
+            type="button"
+            class="icon-button mobile-menu"
+            id="sidebar-mobile-toggle"
+            aria-label="Abrir menú"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+          <div class="topbar-brand">
+            <span class="topbar-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <div>
+              <h1>Microfrontends Easy</h1>
+              <p>Entorno de desarrollo local para microfrontends Next.js</p>
+            </div>
+          </div>
+          <div class="topbar-status is-idle" id="micro-status" role="status">
+            <span aria-hidden="true"></span>
+            <div>
+              <strong id="micro-status-title">No hay micros en ejecución</strong>
+              <small id="micro-status-detail">Selecciona un micro para iniciar</small>
+            </div>
+          </div>
+        </header>
+
+        <main class="layout">
+          <section class="content-view" data-view-panel="services">
+            <section class="panel" id="microfrontends">
+              <div class="panel-header">
+                <div>
+                  <h2>Microfrontends</h2>
+                  <p class="section-subtitle">Gestiona los servicios del workspace</p>
+                </div>
+                <div class="services-actions">
+                  <div class="panel-tools" aria-label="Selección de microfrontends">
+                    <button type="button" class="link" id="select-all">Seleccionar todos</button>
+                    <button type="button" class="link" id="select-none">Ninguno</button>
+                  </div>
+                  <button
+                    type="button"
+                    class="primary"
+                    id="start-selected"
+                    title="Iniciar seleccionados"
+                  >
+                    <span aria-hidden="true">▶</span>
+                    <span class="action-copy">Iniciar seleccionados</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="danger"
+                    id="stop-all"
+                    title="Detener todo"
+                  >
+                    <span aria-hidden="true">■</span>
+                    <span class="action-copy">Detener todo</span>
+                  </button>
+                </div>
+              </div>
+              <div class="cards" id="cards"></div>
+            </section>
+          </section>
+
+          <section class="content-view" data-view-panel="remotes" hidden>
+            <section class="panel" id="remotes-panel">
+              <div class="panel-header">
+                <div>
+                  <p class="eyebrow">Dependencias</p>
+                  <h2>Remotes del host</h2>
+                </div>
+                <div class="remotes-header-actions">
+                  <span class="hint" id="remotes-hint"></span>
+                  <button type="button" class="link" id="remotes-add">
+                    + Agregar remote
+                  </button>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table class="remotes">
+                  <thead>
+                    <tr>
+                      <th>Remote</th>
+                      <th>
+                        Valor en <code id="remotes-env-file">.env</code> del
+                        host
+                      </th>
+                      <th>Usar</th>
+                    </tr>
+                  </thead>
+                  <tbody id="remotes-body"></tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+
+          <section class="content-view" data-view-panel="console" hidden>
+            <section class="panel console-panel" id="console-panel">
+              <div class="console-heading">
+                <div>
+                  <p class="eyebrow">Actividad</p>
+                  <h2>Salida en consola</h2>
+                </div>
+                <span class="console-info" id="console-info"></span>
+              </div>
+              <div class="tabs" id="tabs" role="tablist"></div>
+              <div class="console-toolbar">
+                <input
+                  type="search"
+                  id="console-filter"
+                  placeholder="Filtrar líneas…"
+                  autocomplete="off"
+                /><button type="button" id="console-clear">Limpiar vista</button
+                ><button type="button" id="console-copy">Copiar</button
+                ><button type="button" id="console-terminal">
+                  Ver en Terminal
+                </button>
+              </div>
+              <div class="console-wrapper">
+                <div class="console" id="console" tabindex="0"></div>
+                <button type="button" class="follow" id="console-follow" hidden>
+                  ↓ Seguir salida
+                </button>
+              </div>
+            </section>
+          </section>
+        </main>
+      </div>
+    </div>
+    <div class="modal-backdrop" id="app-registry" role="presentation" hidden>
+      <section
+        class="registry-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="registry-title"
+      >
+        <header class="registry-modal-header">
+          <div>
+            <p class="eyebrow">Catálogo local</p>
+            <h2 id="registry-title">Configurar microfrontends</h2>
+          </div>
+          <button
+            type="button"
+            class="registry-close"
+            id="registry-close"
+            aria-label="Cerrar configuración"
+          >
+            ×
+          </button>
+        </header>
+        <p class="registry-intro">
+          Define los micros que deseas administrar. Las carpetas son relativas
+          al workspace y se guardan solo en el launcher.
+        </p>
+        <div class="registry-list" id="registry-list"></div>
+        <footer class="registry-actions">
+          <button type="button" id="registry-add">+ Agregar micro</button>
+          <button type="button" class="primary" id="registry-save">
+            Guardar configuración
+          </button>
+        </footer>
+      </section>
+    </div>
+    <div class="modal-backdrop" id="environment-editor" role="presentation" hidden>
+      <section
+        class="registry-modal environment-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="environment-editor-title"
+      >
+        <header class="registry-modal-header">
+          <div>
+            <p class="eyebrow">Configuración por microfrontend</p>
+            <h2 id="environment-editor-title">Variables de entorno</h2>
+          </div>
+          <button
+            type="button"
+            class="registry-close"
+            id="environment-close"
+            aria-label="Cerrar editor de variables de entorno"
+          >
+            ×
+          </button>
+        </header>
+        <p class="registry-intro" id="environment-editor-description"></p>
+        <div class="environment-files" id="environment-files"></div>
+        <footer class="registry-actions environment-actions">
+          <span>Se guardan los tres ambientes.</span>
+          <button type="button" class="primary" id="environment-save">
+            Guardar variables
+          </button>
+        </footer>
+      </section>
+    </div>
+    <script src="/ansi.js"></script>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
